@@ -11,7 +11,16 @@ def run(cmd, timeout=15):
     exe = shutil.which(cmd[0])
     if not exe:
         return {"ok": False, "path": None, "exit_code": None, "stdout": "", "stderr": "not found"}
-    proc = subprocess.run([exe] + cmd[1:], text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout)
+    try:
+        proc = subprocess.run([exe] + cmd[1:], text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout)
+    except subprocess.TimeoutExpired as exc:
+        return {
+            "ok": False,
+            "path": exe,
+            "exit_code": None,
+            "stdout": (exc.stdout or "").strip() if isinstance(exc.stdout, str) else "",
+            "stderr": "timed out after " + str(timeout) + "s",
+        }
     return {
         "ok": proc.returncode == 0,
         "path": exe,
