@@ -7,7 +7,7 @@
 把下面这一句粘贴到 Codex 对话框：
 
 ```text
-$skill-installer install https://github.com/YOUR_ORG/beauty-store-digital-employees/tree/main/skills/beauty-store-digital-employees
+$skill-installer install https://github.com/gxd0000007-stack/beauty-store-digital-employees/tree/main/skills/beauty-store-digital-employees
 ```
 
 安装后继续粘贴：
