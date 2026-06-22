@@ -1,0 +1,10 @@
+{
+  "name": "beauty-store-digital-employees",
+  "display_name": "美业门店数字员工系统",
+  "description": "Codex + 飞书标准美业门店数字员工系统安装包。",
+  "version": "0.1.0",
+  "install": {
+    "primary": "skill-installer",
+    "skill_path": "skills/beauty-store-digital-employees"
+  }
+}

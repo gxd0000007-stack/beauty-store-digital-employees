@@ -1,0 +1,12 @@
+{
+  "schema_version": "1",
+  "name": "beauty-store-digital-employees",
+  "display_name": "美业门店数字员工系统",
+  "description": "在学员自己的飞书里初始化标准美业门店数字员工系统，并引导配置运营总助 Agent 机器人回消息。",
+  "version": "0.1.0",
+  "skills": [
+    {
+      "path": "skills/beauty-store-digital-employees"
+    }
+  ]
+}
