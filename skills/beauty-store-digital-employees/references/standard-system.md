@@ -4,11 +4,21 @@ Use this reference when creating the v1 standard system in a learner's Feishu wo
 
 ## Product Decision
 
-- Install path: create a new standard Feishu business system.
+- Canonical product name: `门店表格管理系统｜一张表管公司`.
+- Install path: create a new owner-facing boss Base plus a backstage employee assets/backup folder.
 - Do not adapt existing learner structures in v1.
 - The learner connects their own Feishu account and tenant.
 - Real writes are allowed only after explicit confirmation.
-- The system is for beauty store customer management and finance operations, not generic project management.
+- The system is for beauty store operating data, customer management, finance operations, and digital employee execution, not generic project management.
+- The public GitHub package must not copy the maintainer's real Base token, real folder token, real records, screenshots, finance data, or App Secret.
+
+## Two-Layer Structure
+
+| Layer | Name | Audience | Purpose |
+| --- | --- | --- | --- |
+| Boss Base | 门店表格管理系统｜一张表管公司 | Store owner | Daily/monthly operating data, dashboards, quick entries, business review |
+| Employee assets folder | 美业门店数字员工资料与备份 | Owner + implementer | Role brains, SOP backup, training docs, install records, recovery notes |
+| Digital employee control tables | 客户主表 and task tables | Digital employees | Controlled automation, follow-up, repurchase, complaint, finance, knowledge logs |
 
 ## Root Objects
 
@@ -16,15 +26,48 @@ Create these top-level objects when the user confirms initial real write:
 
 | Object | Suggested name | Purpose |
 | --- | --- | --- |
-| Root folder | 美业门店数字员工系统-v1 | Contains all generated docs and links |
-| Main Base | 美业门店数字员工系统-v1 | Holds structured business data |
-| System overview doc | 00-系统总览与使用说明 | Owner-facing entry doc |
-| Employee roles doc | 01-7个数字员工职责说明 | Human-readable role map |
-| SOP doc | 02-客户管理与财务SOP | Daily operating rules |
-| Weekly report doc | 03-经营分析周报模板 | Analysis output template |
-| Knowledge doc folder | 04-知识库 | Talk tracks, cases, SOP, retrospectives |
+| Boss Base | 门店表格管理系统｜一张表管公司 | Owner-facing tables, dashboards, homepage, quick entries |
+| Employee assets folder | 美业门店数字员工资料与备份 | Install records, roles, SOP, training, knowledge, backups |
+| Install record doc | 00-安装记录/安装记录 | Created URLs, table IDs, version, timestamp; no secrets |
+| Employee roles docs | 01-7个数字员工/* | Human-readable role map |
+| SOP docs | 02-SOP与流程/* | Daily operating rules |
+| Knowledge docs | 03-话术与知识库/* | Talk tracks, cases, SOP, retrospectives |
+
+## Boss Base Template
+
+Use `references/boss-dashboard-template.md` and `manifests/boss-base-template.json` as the source of truth.
+
+Required native folder groups:
+
+1. 01 首页
+2. 02 经营看板
+3. 03 顾客管理
+4. 04 员工管理
+5. 05 库存管理
+6. 06 营销管理
+7. 07 培训管理
+8. 08 财务管理
+9. 09 医疗合规管理
+
+The homepage `首页总览` should include 19 quick entries and visual operating charts where the Feishu Base component system supports them.
+
+## Employee Assets Folder
+
+Use `references/employee-assets-folder.md` and `manifests/employee-folder-template.json` as the source of truth.
+
+This folder is not the boss dashboard. It stores the operational brain and backup materials for the implementation:
+
+- install record and version changes
+- 7 digital employee role docs
+- SOP/process backup
+- talk tracks and knowledge
+- training materials
+- backup/export/recovery instructions
+- issue records and retrospectives
 
 ## Base Tables
+
+The following tables are the digital employee control layer. They may live in the same Base or a supporting Base depending on the learner's Feishu limits, but their center entity remains `客户主表`.
 
 ### 1. 客户主表
 

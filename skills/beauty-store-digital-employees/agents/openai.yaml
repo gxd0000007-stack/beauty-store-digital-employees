@@ -1,6 +1,6 @@
 interface:
-  display_name: "美业门店数字员工"
-  short_description: "为学员飞书初始化标准美业门店数字员工系统"
-  default_prompt: "使用 $beauty-store-digital-employees 在我的飞书里初始化标准美业门店数字员工系统。"
+  display_name: "门店表格管理系统"
+  short_description: "初始化「门店表格管理系统｜一张表管公司」和 7 个数字员工 BOT 配置"
+  default_prompt: "使用 $beauty-store-digital-employees，在我的飞书里预览并初始化「门店表格管理系统｜一张表管公司」。"
 policy:
   allow_implicit_invocation: true

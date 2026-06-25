@@ -17,7 +17,7 @@ Use this reference before any real write to a learner's Feishu workspace.
 
 For L1 initial creation, require a sentence equivalent to:
 
-`我确认在我的飞书里创建标准美业门店数字员工系统。`
+`我确认在我的飞书里创建门店表格管理系统｜一张表管公司。`
 
 For L2-L4, require a preview containing:
 

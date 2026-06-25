@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate safe lark-channel-bridge commands for the first bot profile."""
+"""Generate safe lark-channel-bridge commands for a digital employee bot profile."""
 import argparse
 import json
 import os
@@ -49,6 +49,7 @@ def main():
     result = {
         "employee": args.employee,
         "profile": profile,
+        "available_employees": sorted(PROFILE_BY_EMPLOYEE),
         "workspace": workspace,
         "app_id": args.app_id,
         "commands": {
